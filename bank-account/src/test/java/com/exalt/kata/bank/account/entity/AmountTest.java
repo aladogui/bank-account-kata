@@ -9,28 +9,32 @@ class AmountTest {
 
   @Test
   void initializeAmount() {
+    Amount zero = new Amount(0);
     Amount amount = new Amount();
 
     amount.setValue(0);
 
-    assertEquals(0, amount.getValue());
+    assertEquals(zero, amount);
   }
 
   @Test
   void addAmount() {
+    Amount zero = new Amount(0);
+    Amount ten = new Amount(10);
+    Amount thirtyFive = new Amount(35);
     Amount amount = new Amount();
 
     amount.setValue(0);
 
-    assertEquals(0, amount.getValue());
+    assertEquals(zero, amount);
 
     amount.add(10);
 
-    assertEquals(10, amount.getValue());
+    assertEquals(ten, amount);
 
     amount.add(25);
 
-    assertEquals(35, amount.getValue());
+    assertEquals(thirtyFive, amount);
   }
 
 
