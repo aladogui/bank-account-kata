@@ -30,7 +30,10 @@ class AccountTest {
     LocalDate withdrawalDate = LocalDate.of(2022, 8, 20);
     Amount fiveHundred = new Amount(500);
 
-    account.withdrawal(fiveHundred, withdrawalDate);
+    Transaction firstTransaction = new Transaction(new Amount(500), withdrawalDate,
+        Operation.RETRIEVE);
+
+    account.withdrawal(firstTransaction);
 
     assertEquals(fiveHundred, account.getBalance());
   }
@@ -44,7 +47,10 @@ class AccountTest {
     LocalDate depositDate = LocalDate.of(2022, 8, 20);
     Amount fiveHundred = new Amount(500);
 
-    account.deposit(fiveHundred, depositDate);
+    Transaction transaction = new Transaction(fiveHundred, depositDate,
+        Operation.DEPOSIT);
+
+    account.deposit(transaction);
 
     assertEquals(fiveHundred, account.getBalance());
 
