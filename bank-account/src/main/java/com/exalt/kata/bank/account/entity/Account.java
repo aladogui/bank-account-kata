@@ -1,6 +1,5 @@
 package com.exalt.kata.bank.account.entity;
 
-import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,9 +18,9 @@ public class Account {
   private Amount balance = new Amount(0);
 
 
-  public void withdrawal(final Amount amount, final LocalDate withdrawalDate) {
+  public void withdrawal(final Transaction transaction) {
   }
 
-  public void deposit(final Amount amount, final LocalDate depositDate) {
+  public void deposit(final Transaction transaction) {
   }
 }
