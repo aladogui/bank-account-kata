@@ -16,4 +16,7 @@ public class Amount {
   public void add(final double value) {
     this.value += value;
   }
+
+  public void subtract(final int i) {
+  }
 }
