@@ -17,6 +17,7 @@ public class Amount {
     this.value += value;
   }
 
-  public void subtract(final int i) {
+  public void subtract(final int value) {
+    this.value -= value;
   }
 }
