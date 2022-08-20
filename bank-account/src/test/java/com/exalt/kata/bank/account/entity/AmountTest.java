@@ -1,8 +1,12 @@
 package com.exalt.kata.bank.account.entity;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+
+/*
+ * Copyright (c) 2022. @Ala DOGUI
+ */
 
 class AmountTest {
 
@@ -58,7 +62,6 @@ class AmountTest {
 
     assertEquals(zero, amount);
   }
-
 
 
 }

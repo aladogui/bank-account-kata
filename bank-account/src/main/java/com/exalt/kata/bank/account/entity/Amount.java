@@ -3,6 +3,10 @@ package com.exalt.kata.bank.account.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/*
+ * Copyright (c) 2022. @Ala DOGUI
+ */
+
 @Data
 @AllArgsConstructor
 public class Amount {
