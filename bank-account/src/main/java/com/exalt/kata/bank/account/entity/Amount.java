@@ -23,7 +23,20 @@ public class Amount {
     this.value += value;
   }
 
+  public static Amount of(double amount) {
+    return new Amount(amount);
+  }
+
   public void subtract(final int value) {
     this.value -= value;
   }
+
+  public Amount calculateAddition(final Amount amount) {
+    return Amount.of(amount.value + this.value);
+  }
+
+  public double getNegativeValue() {
+    return -value;
+  }
+
 }

@@ -22,5 +22,13 @@ class TransactionTest {
     assertEquals(Operation.DEPOSIT, firstTransaction.getOperation());
   }
 
+  @Test
+  void given_balance_500_when_add_1000_then_return_1500() {
+    Transaction transaction = new Transaction(Amount.of(1000), LocalDate.now(), Operation.DEPOSIT);
+    Amount amountAfterTransaction = transaction.getBalanceAfterTransaction(Amount.of(500));
+    assertEquals(Amount.of(1500), amountAfterTransaction);
+
+  }
+
 
 }
